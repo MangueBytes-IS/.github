@@ -1,62 +1,67 @@
-name: "🐛 Bug Report"
-description: Create a new ticket for a bug.
-title: "🐛 [BUG] - <title>"
-labels: [
-  "bug"
-]
+name: "Relatório de Bug"
+description: Crie um novo chamado para relatar um bug.
+title: "[BUG] - <título>"
+labels:
+  - "bug"
+
 body:
   - type: textarea
     id: description
     attributes:
-      label: "Description"
-      description: Please enter an explicit description of your issue
-      placeholder: Short and explicit description of your incident...
+      label: "Descrição"
+      description: Informe uma descrição clara e objetiva do problema.
+      placeholder: Descrição curta e objetiva do incidente...
     validations:
       required: true
+
   - type: input
     id: reprod-url
     attributes:
-      label: "Reproduction URL"
-      description: Please enter your GitHub URL to provide a reproduction of the issue
-      placeholder: ex. https://github.com/USERNAME/REPO-NAME
+      label: "URL de Reprodução"
+      description: Informe a URL do GitHub ou outro link que ajude a reproduzir o problema.
+      placeholder: ex. https://github.com/USUARIO/NOME-DO-REPOSITORIO
     validations:
       required: true
+
   - type: textarea
     id: reprod
     attributes:
-      label: "Reproduction steps"
-      description: Please enter an explicit description of your issue
+      label: "Passos para Reprodução"
+      description: Descreva claramente os passos necessários para reproduzir o problema.
       value: |
-        1. Go to '...'
-        2. Click on '....'
-        3. Scroll down to '....'
-        4. See error
+        1. Acesse '...'
+        2. Clique em '...'
+        3. Role a página até '...'
+        4. Veja o erro
       render: bash
     validations:
       required: true
+
   - type: textarea
     id: screenshot
     attributes:
-      label: "Screenshots"
-      description: If applicable, add screenshots to help explain your problem.
+      label: "Capturas de Tela"
+      description: Se aplicável, adicione capturas de tela para ajudar a explicar o problema.
       value: |
-        ![DESCRIPTION](LINK.png)
+        ![DESCRIÇÃO](LINK.png)
       render: bash
     validations:
       required: false
+
   - type: textarea
     id: logs
     attributes:
       label: "Logs"
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      description: Copie e cole qualquer saída de log relevante. O conteúdo será formatado automaticamente como código, então não é necessário usar crases.
       render: bash
     validations:
       required: false
+
   - type: dropdown
     id: browsers
     attributes:
-      label: "Browsers"
-      description: What browsers are you seeing the problem on ?
+      label: "Navegadores"
+      description: Em quais navegadores o problema está ocorrendo?
       multiple: true
       options:
         - Firefox
@@ -66,11 +71,12 @@ body:
         - Opera
     validations:
       required: false
+
   - type: dropdown
     id: os
     attributes:
-      label: "OS"
-      description: What is the impacted environment ?
+      label: "Sistema Operacional"
+      description: Qual é o ambiente impactado?
       multiple: true
       options:
         - Windows
