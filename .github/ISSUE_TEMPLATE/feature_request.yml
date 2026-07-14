@@ -1,63 +1,69 @@
-name: "💡 Feature Request"
-description: Create a new ticket for a new feature request
-title: "💡 [REQUEST] - <title>"
-labels: [
-  "question"
-]
+name: "Solicitação de Funcionalidade"
+description: Crie um novo chamado para solicitar uma nova funcionalidade.
+title: "[REQUEST] - <título>"
+labels:
+  - "question"
+
 body:
   - type: input
     id: start_date
     attributes:
-      label: "Start Date"
-      description: Start of development
-      placeholder: "month/day/year"
+      label: "Data de Início"
+      description: Início do desenvolvimento.
+      placeholder: "mês/dia/ano"
     validations:
       required: false
+
   - type: textarea
     id: implementation_pr
     attributes:
-      label: "Implementation PR"
-      description: Pull request used
-      placeholder: "#Pull Request ID"
+      label: "PR de Implementação"
+      description: Pull Request utilizado.
+      placeholder: "#ID do Pull Request"
     validations:
       required: false
+
   - type: textarea
     id: reference_issues
     attributes:
-      label: "Reference Issues"
-      description: Common issues
-      placeholder: "#Issues IDs"
+      label: "Issues de Referência"
+      description: Issues relacionadas ou semelhantes.
+      placeholder: "#IDs das Issues"
     validations:
       required: false
+
   - type: textarea
     id: summary
     attributes:
-      label: "Summary"
-      description: Provide a brief explanation of the feature
-      placeholder: Describe in a few lines your feature request
+      label: "Resumo"
+      description: Forneça uma breve explicação sobre a funcionalidade.
+      placeholder: Descreva em poucas linhas sua solicitação de funcionalidade.
     validations:
       required: true
+
   - type: textarea
     id: basic_example
     attributes:
-      label: "Basic Example"
-      description: Indicate here some basic examples of your feature.
-      placeholder: A few specific words about your feature request.
+      label: "Exemplo Básico"
+      description: Informe aqui alguns exemplos básicos da funcionalidade.
+      placeholder: Algumas palavras específicas sobre sua solicitação de funcionalidade.
     validations:
       required: true
+
   - type: textarea
     id: drawbacks
     attributes:
-      label: "Drawbacks"
-      description: What are the drawbacks/impacts of your feature request ?
-      placeholder: Identify the drawbacks and impacts while being neutral on your feature request
+      label: "Pontos de Atenção"
+      description: Quais são os possíveis impactos ou desvantagens dessa funcionalidade?
+      placeholder: Identifique os impactos e pontos de atenção de forma neutra sobre sua solicitação.
     validations:
       required: true
+
   - type: textarea
     id: unresolved_question
     attributes:
-      label: "Unresolved questions"
-      description: What questions still remain unresolved ?
-      placeholder: Identify any unresolved issues.
+      label: "Questões em Aberto"
+      description: Quais dúvidas ainda permanecem sem resposta?
+      placeholder: Identifique quaisquer questões ainda não resolvidas.
     validations:
       required: false
