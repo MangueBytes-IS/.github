@@ -1,0 +1,154 @@
+name: "Melhoria"
+description: Crie um novo chamado para propor uma melhoria em uma funcionalidade, processo ou parte existente do projeto.
+title: "[IMPROVEMENT] - <título>"
+labels:
+  - "improvement"
+
+body:
+  - type: textarea
+    id: current_situation
+    attributes:
+      label: "Situação Atual"
+      description: Descreva como a funcionalidade, processo ou parte do sistema funciona atualmente.
+      placeholder: Atualmente, o sistema/processo funciona da seguinte forma...
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed_improvement
+    attributes:
+      label: "Melhoria Proposta"
+      description: Descreva claramente qual melhoria deve ser realizada.
+      placeholder: A melhoria proposta consiste em...
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: "Motivação"
+      description: Explique por que essa melhoria é necessária ou importante.
+      placeholder: Essa melhoria é importante porque...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_benefits
+    attributes:
+      label: "Benefícios Esperados"
+      description: Liste os principais benefícios esperados após a implementação da melhoria.
+      value: |
+        - Benefício 1
+        - Benefício 2
+        - Benefício 3
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: "Critérios de Aceite"
+      description: Liste os critérios que indicam que a melhoria foi concluída corretamente.
+      value: |
+        - [ ] Critério 1
+        - [ ] Critério 2
+        - [ ] Critério 3
+    validations:
+      required: true
+
+  - type: textarea
+    id: impacted_areas
+    attributes:
+      label: "Áreas Impactadas"
+      description: Informe quais partes do sistema, produto ou processo serão impactadas.
+      placeholder: Ex. Tela de login, API de autenticação, dashboard, fluxo de cadastro...
+    validations:
+      required: false
+
+  - type: textarea
+    id: technical_details
+    attributes:
+      label: "Detalhes Técnicos"
+      description: Informe detalhes técnicos relevantes para a implementação da melhoria.
+      placeholder: Componentes, arquivos, endpoints, regras de negócio, dependências ou observações técnicas...
+    validations:
+      required: false
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: "Riscos ou Pontos de Atenção"
+      description: Informe possíveis riscos, impactos negativos ou cuidados necessários durante a implementação.
+      placeholder: Ex. Pode impactar usuários ativos, exige alteração no banco, pode afetar performance...
+    validations:
+      required: false
+
+  - type: textarea
+    id: related_issues
+    attributes:
+      label: "Issues Relacionadas"
+      description: Informe issues relacionadas, dependências ou tarefas vinculadas.
+      placeholder: "#ID da issue relacionada"
+    validations:
+      required: false
+
+  - type: textarea
+    id: implementation_pr
+    attributes:
+      label: "PR de Implementação"
+      description: Informe o Pull Request relacionado à implementação, se já existir.
+      placeholder: "#ID do Pull Request"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Prioridade"
+      description: Qual é a prioridade desta melhoria?
+      options:
+        - Baixa
+        - Média
+        - Alta
+        - Crítica
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: "Área"
+      description: Qual área do projeto será impactada?
+      multiple: true
+      options:
+        - Frontend
+        - Backend
+        - Mobile
+        - Banco de Dados
+        - DevOps / Infra
+        - Design / UI
+        - Documentação
+        - Testes
+        - Produto
+        - Processo Interno
+        - Outro
+    validations:
+      required: true
+
+  - type: input
+    id: estimated_effort
+    attributes:
+      label: "Estimativa de Esforço"
+      description: Informe uma estimativa de esforço para implementar a melhoria.
+      placeholder: "ex. 2h, 4h, 1 dia ou 3 pontos"
+    validations:
+      required: false
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: "Evidências Esperadas"
+      description: Informe quais evidências devem ser apresentadas ao concluir a melhoria.
+      placeholder: Prints, vídeo, link de homologação, testes realizados, métricas ou documentação atualizada...
+    validations:
+      required: false

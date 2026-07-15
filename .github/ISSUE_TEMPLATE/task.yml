@@ -1,0 +1,122 @@
+name: "Tarefa"
+description: Crie um novo chamado para uma tarefa de desenvolvimento ou atividade técnica.
+title: "[TASK | <Especificacao se aplicavel>] - <título>"
+labels:
+  - "task"
+
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: "Descrição"
+      description: Descreva de forma clara o que precisa ser feito.
+      placeholder: Explique a tarefa de maneira objetiva...
+    validations:
+      required: true
+
+  - type: textarea
+    id: objective
+    attributes:
+      label: "Objetivo"
+      description: Explique qual problema essa tarefa resolve ou qual entrega ela possibilita.
+      placeholder: Esta tarefa tem como objetivo...
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: "Critérios de Aceite"
+      description: Liste os critérios que indicam que a tarefa foi concluída corretamente.
+      value: |
+        - [ ] Critério 1
+        - [ ] Critério 2
+        - [ ] Critério 3
+    validations:
+      required: true
+
+  - type: textarea
+    id: technical_details
+    attributes:
+      label: "Detalhes Técnicos"
+      description: Informe detalhes técnicos relevantes para a execução da tarefa.
+      placeholder: Tecnologias, arquivos, componentes, endpoints, regras ou observações importantes...
+    validations:
+      required: false
+
+  - type: textarea
+    id: related_issues
+    attributes:
+      label: "Issues Relacionadas"
+      description: Informe issues relacionadas, dependências ou tarefas vinculadas.
+      placeholder: "#ID da issue relacionada"
+    validations:
+      required: false
+
+  - type: textarea
+    id: implementation_pr
+    attributes:
+      label: "PR de Implementação"
+      description: Informe o Pull Request relacionado à implementação, se já existir.
+      placeholder: "#ID do Pull Request"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: "Prioridade"
+      description: Qual é a prioridade desta tarefa?
+      options:
+        - Baixa
+        - Média
+        - Alta
+        - Crítica
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: "Área"
+      description: Qual área do projeto será impactada?
+      multiple: true
+      options:
+        - Frontend
+        - Backend
+        - Mobile
+        - Banco de Dados
+        - DevOps / Infra
+        - Design / UI
+        - Documentação
+        - Testes
+        - Outro
+    validations:
+      required: true
+
+  - type: input
+    id: estimated_time
+    attributes:
+      label: "Estimativa"
+      description: Informe uma estimativa de esforço para a tarefa.
+      placeholder: "ex. 2h, 4h, 1 dia ou 3 pontos"
+    validations:
+      required: false
+
+  - type: input
+    id: due_date
+    attributes:
+      label: "Data Limite"
+      description: Informe a data limite, caso exista.
+      placeholder: "dia/mês/ano"
+    validations:
+      required: false
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: "Evidências Esperadas"
+      description: Informe quais evidências devem ser apresentadas ao concluir a tarefa.
+      placeholder: Prints, vídeo, link de homologação, testes realizados ou documentação atualizada...
+    validations:
+      required: false
