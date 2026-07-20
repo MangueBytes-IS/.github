@@ -1,0 +1,154 @@
+name: "História de Usuário"
+description: "Documente uma necessidade do usuário com valor e critérios de aceite verificáveis."
+title: "[STORY] "
+labels:
+  - "user-story"
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Orientações
+
+        Descreva **uma única entrega de valor**. Story Points, prioridade, status e sprint devem ser preenchidos nos campos do GitHub Projects após o refinamento.
+
+  - type: input
+    id: epic
+    attributes:
+      label: "Épico relacionado"
+      description: "Informe o número ou o link da Issue que representa o épico."
+      placeholder: "Ex.: #10 — E02 Gestão de áreas de interesse"
+    validations:
+      required: true
+
+  - type: input
+    id: requirements
+    attributes:
+      label: "Requisitos relacionados"
+      description: "Informe os requisitos funcionais e não funcionais atendidos pela história."
+      placeholder: "Ex.: RF14, RF26, RF28, RNF02"
+    validations:
+      required: true
+
+  - type: input
+    id: persona
+    attributes:
+      label: "Como"
+      description: "Quem precisa desta funcionalidade? Informe o perfil, e não o nome de uma pessoa."
+      placeholder: "Ex.: analista ambiental autenticado"
+    validations:
+      required: true
+
+  - type: textarea
+    id: need
+    attributes:
+      label: "Quero"
+      description: "Descreva a necessidade ou ação esperada, sem detalhar antecipadamente a solução técnica."
+      placeholder: "Ex.: desenhar e cadastrar uma área de interesse no mapa"
+    validations:
+      required: true
+
+  - type: textarea
+    id: benefit
+    attributes:
+      label: "Para"
+      description: "Explique o benefício ou resultado esperado."
+      placeholder: "Ex.: utilizar a região cadastrada em coletas e análises ambientais"
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: "Contexto e valor de negócio"
+      description: "Explique o problema atual, por que a entrega é necessária e qual valor ela gera."
+      placeholder: |
+        Atualmente...
+
+        Esta história é importante porque...
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: "Critérios de aceite"
+      description: "Liste comportamentos objetivos e verificáveis. Prefira o formato Dado/Quando/Então."
+      placeholder: |
+        - [ ] Dado que ..., quando ..., então ...
+        - [ ] Dado que ..., quando ..., então ...
+        - [ ] Em caso de falha, o sistema deve ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: business_rules
+    attributes:
+      label: "Regras de negócio"
+      description: "Informe validações, permissões, limites ou comportamentos obrigatórios."
+      placeholder: |
+        - Regra 1
+        - Regra 2
+    validations:
+      required: false
+
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: "Fora de escopo"
+      description: "Registre explicitamente o que não será entregue nesta história."
+      placeholder: |
+        - Não inclui ...
+        - Será tratado posteriormente em ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: "Dependências e bloqueios"
+      description: "Informe outras Issues, decisões, serviços, protótipos ou acessos necessários."
+      placeholder: |
+        - Depende de #...
+        - Bloqueado por ...
+        - Nenhuma dependência conhecida
+    validations:
+      required: true
+
+  - type: textarea
+    id: references
+    attributes:
+      label: "Referências"
+      description: "Adicione protótipos, diagramas, documentos ou links relevantes."
+      placeholder: |
+        - Protótipo:
+        - Documento:
+        - Diagrama:
+    validations:
+      required: false
+
+  - type: textarea
+    id: refinement_notes
+    attributes:
+      label: "Notas para refinamento"
+      description: "Registre dúvidas, riscos ou observações. As tasks técnicas devem ser criadas como sub-issues durante o refinamento."
+      placeholder: |
+        - Dúvida a esclarecer:
+        - Risco identificado:
+        - Possível divisão da história:
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: initial_check
+    attributes:
+      label: "Verificação inicial"
+      description: "Confirme que a história possui informação suficiente para entrar no backlog."
+      options:
+        - label: "A história descreve uma única necessidade ou resultado."
+          required: true
+        - label: "Os critérios de aceite são objetivos e podem ser verificados."
+          required: true
+        - label: "Dados pessoais, credenciais ou outras informações sensíveis não foram incluídos."
+          required: true
