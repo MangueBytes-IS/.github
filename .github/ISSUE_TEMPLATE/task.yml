@@ -9,13 +9,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Utilize este template para trabalhos técnicos com resultado verificável.
-
-        Antes de iniciar o desenvolvimento, a tarefa deverá ser refinada,
-        estimada e selecionada para uma sprint.
-
-        Não inclua senhas, tokens, credenciais, dados pessoais ou outras
-        informações sensíveis nesta issue.
+        
 
   - type: textarea
     id: context
@@ -138,13 +132,9 @@ body:
       label: "Evidências esperadas"
       description: "Informe quais evidências devem ser registradas para permitir a validação."
       placeholder: |
-        - Resultado dos testes
-        - Resposta do endpoint
-        - Logs sanitizados
-        - Captura da interface
-        - Documentação atualizada
+        Prints, vídeo, link de homologação, testes realizados ou documentação atualizada...
     validations:
-      required: true
+      required: false
 
   - type: checkboxes
     id: author_checklist
