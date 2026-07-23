@@ -11,7 +11,7 @@ Descreva o objetivo deste PR.
 Explique o problema resolvido e o resultado esperado.
 -->
 
-- Eu so mudei uma telinha
+- 
 
 
 ## Alterações realizadas
@@ -34,16 +34,15 @@ Explique o passo a passo para o reviewer testar.
 Inclua dados necessários, comandos ou cenários específicos.
 -->
 
-1. Temq rodar a aplicacao
+1. 
 
-2. Temq acessar a rota jdnqo
+2. 
 
-3. Visualizar se 
-
+3. 
 
 **Resultado esperado:**
 
-- Que vc consiga ver anaimaçoes q eu coloquei la
+- 
 
 ## Pontos de atenção
 
